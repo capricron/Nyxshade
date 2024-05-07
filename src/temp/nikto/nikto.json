@@ -1,0 +1,625 @@
+{
+  "_declaration": {
+    "_attributes": {
+      "version": "1.0"
+    }
+  },
+  "_doctype": "niktoscan SYSTEM \"/usr/share/doc/nikto/nikto.dtd\"",
+  "niktoscan": [
+    {
+      "_attributes": {
+        "hoststest": "0",
+        "options": "--host 192.168.44.142 --output src/temp/nikto/nikto.xml",
+        "version": "2.1.5",
+        "scanstart": "Mon May  6 10:49:49 2024",
+        "scanend": "Thu Jan  1 07:00:00 1970",
+        "scanelapsed": " seconds",
+        "nxmlversion": "1.2"
+      },
+      "scandetails": {
+        "_attributes": {
+          "targetip": "192.168.44.142",
+          "targethostname": "192.168.44.142",
+          "targetport": "80",
+          "targetbanner": "nginx/1.22.1",
+          "starttime": "2024-05-06 10:49:59",
+          "sitename": "http://192.168.44.142:80",
+          "siteip": "http://192.168.44.142:80",
+          "hostheader": "192.168.44.142",
+          "errors": "0",
+          "checks": "6544"
+        },
+        "item": [
+          {
+            "_attributes": {
+              "id": "999976",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "The anti-clickjacking X-Frame-Options header is not present."
+            },
+            "uri": {
+              "_cdata": "/"
+            },
+            "namelink": {
+              "_cdata": "http://192.168.44.142:80/"
+            },
+            "iplink": {
+              "_cdata": "http://192.168.44.142:80/"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "999960",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "Cookie PHPSESSID created without the httponly flag"
+            },
+            "uri": {
+              "_cdata": "/"
+            },
+            "namelink": {
+              "_cdata": "http://192.168.44.142:80/"
+            },
+            "iplink": {
+              "_cdata": "http://192.168.44.142:80/"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "999984",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "Server leaks inodes via ETags, header found with file /.git/index, fields: 0x65fa8b4d 0x9e56 "
+            },
+            "uri": {
+              "_cdata": "/.git/index"
+            },
+            "namelink": {
+              "_cdata": "http://192.168.44.142:80/.git/index"
+            },
+            "iplink": {
+              "_cdata": "http://192.168.44.142:80/.git/index"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "006530",
+              "osvdbid": "3092",
+              "osvdblink": "http://osvdb.org/3092",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "/.git/index: Git Index file may contain directory listing information."
+            },
+            "uri": {
+              "_cdata": "/.git/index"
+            },
+            "namelink": {
+              "_cdata": "http://192.168.44.142:80/.git/index"
+            },
+            "iplink": {
+              "_cdata": "http://192.168.44.142:80/.git/index"
+            }
+          }
+        ],
+        "statistics": {
+          "_attributes": {
+            "elapsed": "13",
+            "itemsfound": "4",
+            "itemstested": "6544",
+            "endtime": "2024-05-06 10:50:12"
+          }
+        }
+      }
+    },
+    {
+      "_attributes": {
+        "hoststest": "0",
+        "options": "--host 192.168.44.142 --output src/temp/nikto/nikto.xml",
+        "version": "2.1.5",
+        "scanstart": "Mon May  6 10:50:20 2024",
+        "scanend": "Thu Jan  1 07:00:00 1970",
+        "scanelapsed": " seconds",
+        "nxmlversion": "1.2"
+      },
+      "scandetails": {
+        "_attributes": {
+          "targetip": "192.168.44.142",
+          "targethostname": "192.168.44.142",
+          "targetport": "80",
+          "targetbanner": "nginx/1.22.1",
+          "starttime": "2024-05-06 10:50:30",
+          "sitename": "http://192.168.44.142:80",
+          "siteip": "http://192.168.44.142:80",
+          "hostheader": "192.168.44.142",
+          "errors": "0",
+          "checks": "6544"
+        },
+        "item": [
+          {
+            "_attributes": {
+              "id": "999976",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "The anti-clickjacking X-Frame-Options header is not present."
+            },
+            "uri": {
+              "_cdata": "/"
+            },
+            "namelink": {
+              "_cdata": "http://192.168.44.142:80/"
+            },
+            "iplink": {
+              "_cdata": "http://192.168.44.142:80/"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "999960",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "Cookie PHPSESSID created without the httponly flag"
+            },
+            "uri": {
+              "_cdata": "/"
+            },
+            "namelink": {
+              "_cdata": "http://192.168.44.142:80/"
+            },
+            "iplink": {
+              "_cdata": "http://192.168.44.142:80/"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "999984",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "Server leaks inodes via ETags, header found with file /.git/index, fields: 0x65fa8b4d 0x9e56 "
+            },
+            "uri": {
+              "_cdata": "/.git/index"
+            },
+            "namelink": {
+              "_cdata": "http://192.168.44.142:80/.git/index"
+            },
+            "iplink": {
+              "_cdata": "http://192.168.44.142:80/.git/index"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "006530",
+              "osvdbid": "3092",
+              "osvdblink": "http://osvdb.org/3092",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "/.git/index: Git Index file may contain directory listing information."
+            },
+            "uri": {
+              "_cdata": "/.git/index"
+            },
+            "namelink": {
+              "_cdata": "http://192.168.44.142:80/.git/index"
+            },
+            "iplink": {
+              "_cdata": "http://192.168.44.142:80/.git/index"
+            }
+          }
+        ],
+        "statistics": {
+          "_attributes": {
+            "elapsed": "12",
+            "itemsfound": "4",
+            "itemstested": "6544",
+            "endtime": "2024-05-06 10:50:42"
+          }
+        }
+      }
+    },
+    {
+      "_attributes": {
+        "hoststest": "0",
+        "options": "--host 192.168.44.142 --output src/temp/nikto/nikto.xml",
+        "version": "2.1.5",
+        "scanstart": "Mon May  6 10:51:14 2024",
+        "scanend": "Thu Jan  1 07:00:00 1970",
+        "scanelapsed": " seconds",
+        "nxmlversion": "1.2"
+      },
+      "scandetails": {
+        "_attributes": {
+          "targetip": "192.168.44.142",
+          "targethostname": "192.168.44.142",
+          "targetport": "80",
+          "targetbanner": "nginx/1.22.1",
+          "starttime": "2024-05-06 10:51:24",
+          "sitename": "http://192.168.44.142:80",
+          "siteip": "http://192.168.44.142:80",
+          "hostheader": "192.168.44.142",
+          "errors": "0",
+          "checks": "6544"
+        },
+        "item": [
+          {
+            "_attributes": {
+              "id": "999976",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "The anti-clickjacking X-Frame-Options header is not present."
+            },
+            "uri": {
+              "_cdata": "/"
+            },
+            "namelink": {
+              "_cdata": "http://192.168.44.142:80/"
+            },
+            "iplink": {
+              "_cdata": "http://192.168.44.142:80/"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "999960",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "Cookie PHPSESSID created without the httponly flag"
+            },
+            "uri": {
+              "_cdata": "/"
+            },
+            "namelink": {
+              "_cdata": "http://192.168.44.142:80/"
+            },
+            "iplink": {
+              "_cdata": "http://192.168.44.142:80/"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "999984",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "Server leaks inodes via ETags, header found with file /.git/index, fields: 0x65fa8b4d 0x9e56 "
+            },
+            "uri": {
+              "_cdata": "/.git/index"
+            },
+            "namelink": {
+              "_cdata": "http://192.168.44.142:80/.git/index"
+            },
+            "iplink": {
+              "_cdata": "http://192.168.44.142:80/.git/index"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "006530",
+              "osvdbid": "3092",
+              "osvdblink": "http://osvdb.org/3092",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "/.git/index: Git Index file may contain directory listing information."
+            },
+            "uri": {
+              "_cdata": "/.git/index"
+            },
+            "namelink": {
+              "_cdata": "http://192.168.44.142:80/.git/index"
+            },
+            "iplink": {
+              "_cdata": "http://192.168.44.142:80/.git/index"
+            }
+          }
+        ],
+        "statistics": {
+          "_attributes": {
+            "elapsed": "13",
+            "itemsfound": "4",
+            "itemstested": "6544",
+            "endtime": "2024-05-06 10:51:37"
+          }
+        }
+      }
+    },
+    {
+      "_attributes": {
+        "hoststest": "0",
+        "options": "--host 192.168.44.142 --output src/temp/nikto/nikto.xml",
+        "version": "2.1.5",
+        "scanstart": "Mon May  6 10:52:11 2024",
+        "scanend": "Thu Jan  1 07:00:00 1970",
+        "scanelapsed": " seconds",
+        "nxmlversion": "1.2"
+      },
+      "scandetails": {
+        "_attributes": {
+          "targetip": "192.168.44.142",
+          "targethostname": "192.168.44.142",
+          "targetport": "80",
+          "targetbanner": "nginx/1.22.1",
+          "starttime": "2024-05-06 10:52:21",
+          "sitename": "http://192.168.44.142:80",
+          "siteip": "http://192.168.44.142:80",
+          "hostheader": "192.168.44.142",
+          "errors": "0",
+          "checks": "6544"
+        },
+        "item": [
+          {
+            "_attributes": {
+              "id": "999976",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "The anti-clickjacking X-Frame-Options header is not present."
+            },
+            "uri": {
+              "_cdata": "/"
+            },
+            "namelink": {
+              "_cdata": "http://192.168.44.142:80/"
+            },
+            "iplink": {
+              "_cdata": "http://192.168.44.142:80/"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "999960",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "Cookie PHPSESSID created without the httponly flag"
+            },
+            "uri": {
+              "_cdata": "/"
+            },
+            "namelink": {
+              "_cdata": "http://192.168.44.142:80/"
+            },
+            "iplink": {
+              "_cdata": "http://192.168.44.142:80/"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "999984",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "Server leaks inodes via ETags, header found with file /.git/index, fields: 0x65fa8b4d 0x9e56 "
+            },
+            "uri": {
+              "_cdata": "/.git/index"
+            },
+            "namelink": {
+              "_cdata": "http://192.168.44.142:80/.git/index"
+            },
+            "iplink": {
+              "_cdata": "http://192.168.44.142:80/.git/index"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "006530",
+              "osvdbid": "3092",
+              "osvdblink": "http://osvdb.org/3092",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "/.git/index: Git Index file may contain directory listing information."
+            },
+            "uri": {
+              "_cdata": "/.git/index"
+            },
+            "namelink": {
+              "_cdata": "http://192.168.44.142:80/.git/index"
+            },
+            "iplink": {
+              "_cdata": "http://192.168.44.142:80/.git/index"
+            }
+          }
+        ],
+        "statistics": {
+          "_attributes": {
+            "elapsed": "12",
+            "itemsfound": "4",
+            "itemstested": "6544",
+            "endtime": "2024-05-06 10:52:33"
+          }
+        }
+      }
+    },
+    {
+      "_attributes": {
+        "hoststest": "0",
+        "options": "--host smartpath.id --output src/temp/nikto/nikto.xml",
+        "version": "2.1.5",
+        "scanstart": "Mon May  6 10:58:12 2024",
+        "scanend": "Thu Jan  1 07:00:00 1970",
+        "scanelapsed": " seconds",
+        "nxmlversion": "1.2"
+      },
+      "scandetails": {
+        "_attributes": {
+          "targetip": "104.21.46.253",
+          "targethostname": "smartpath.id",
+          "targetport": "80",
+          "targetbanner": "",
+          "starttime": "2024-05-06 10:58:12",
+          "sitename": "http://smartpath.id:80",
+          "siteip": "http://104.21.46.253:80",
+          "hostheader": "smartpath.id",
+          "errors": "0",
+          "checks": "6544"
+        },
+        "item": [
+          {
+            "_attributes": {
+              "id": "999100",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "Uncommon header 'x-content-type-options' found, with contents: nosniff"
+            },
+            "uri": {
+              "_cdata": "/"
+            },
+            "namelink": {
+              "_cdata": "http://smartpath.id:80/"
+            },
+            "iplink": {
+              "_cdata": "http://104.21.46.253:80/"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "999100",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "Uncommon header 'x-frame-options' found, with contents: SAMEORIGIN"
+            },
+            "uri": {
+              "_cdata": "/"
+            },
+            "namelink": {
+              "_cdata": "http://smartpath.id:80/"
+            },
+            "iplink": {
+              "_cdata": "http://104.21.46.253:80/"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "999100",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "Uncommon header 'x-xss-protection' found, with contents: 1; mode=block"
+            },
+            "uri": {
+              "_cdata": "/"
+            },
+            "namelink": {
+              "_cdata": "http://smartpath.id:80/"
+            },
+            "iplink": {
+              "_cdata": "http://104.21.46.253:80/"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "999100",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "Uncommon header 'content-security-policy' found, with contents: frame-ancestors 'self'"
+            },
+            "uri": {
+              "_cdata": "/"
+            },
+            "namelink": {
+              "_cdata": "http://smartpath.id:80/"
+            },
+            "iplink": {
+              "_cdata": "http://104.21.46.253:80/"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "999100",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "GET"
+            },
+            "description": {
+              "_cdata": "Uncommon header 'cf-ray' found, with contents: 87f60e2c9f9f8324-SIN"
+            },
+            "uri": {
+              "_cdata": "/"
+            },
+            "namelink": {
+              "_cdata": "http://smartpath.id:80/"
+            },
+            "iplink": {
+              "_cdata": "http://104.21.46.253:80/"
+            }
+          },
+          {
+            "_attributes": {
+              "id": "999100",
+              "osvdbid": "0",
+              "osvdblink": "http://osvdb.org/0",
+              "method": "TRACK"
+            },
+            "description": {
+              "_cdata": "Uncommon header 'referrer-policy' found, with contents: same-origin"
+            },
+            "uri": {
+              "_cdata": "/"
+            },
+            "namelink": {
+              "_cdata": "http://smartpath.id:80/"
+            },
+            "iplink": {
+              "_cdata": "http://104.21.46.253:80/"
+            }
+          }
+        ],
+        "statistics": {
+          "_attributes": {
+            "elapsed": "1714968534",
+            "itemsfound": "",
+            "itemstested": "6544",
+            "endtime": "2024-05-06 11:08:54"
+          }
+        }
+      }
+    }
+  ]
+}

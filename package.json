@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "dev": "bun run --hot src/index.ts",
+    "generate": "drizzle-kit generate:mysql",
+    "create:tables": "ts-node --files ./migrations/migrator.ts"
+  },
+  "dependencies": {
+    "@planetscale/database": "^1.18.0",
+    "@prisma/client": "^5.13.0",
+    "drizzle-orm": "^0.30.10",
+    "hono": "^4.3.2",
+    "mongoose": "^8.3.4",
+    "mysql2": "^3.9.7",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "drizzle-kit": "^0.20.18",
+    "prisma": "^5.13.0",
+    "sequelize-cli": "^6.6.2"
+  },
+  "name": "scanning-vuln",
+  "module": "index.ts",
+  "type": "module",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
