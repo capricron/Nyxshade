@@ -1,0 +1,20 @@
+[addeventlistener-detect] [http] [info] http://127.0.0.1:3000
+[owasp-juice-shop-detect] [http] [info] http://127.0.0.1:3000
+[fingerprinthub-web-fingerprints:qm-system] [http] [info] http://127.0.0.1:3000
+[x-recruiting-header] [http] [info] http://127.0.0.1:3000 ["/#/jobs"]
+[http-missing-security-headers:strict-transport-security] [http] [info] http://127.0.0.1:3000
+[http-missing-security-headers:content-security-policy] [http] [info] http://127.0.0.1:3000
+[http-missing-security-headers:permissions-policy] [http] [info] http://127.0.0.1:3000
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] http://127.0.0.1:3000
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] http://127.0.0.1:3000
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] http://127.0.0.1:3000
+[http-missing-security-headers:referrer-policy] [http] [info] http://127.0.0.1:3000
+[http-missing-security-headers:clear-site-data] [http] [info] http://127.0.0.1:3000
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] http://127.0.0.1:3000
+[swagger-api] [http] [info] http://127.0.0.1:3000/api-docs/swagger.json [paths="/api-docs/swagger.json"]
+[prometheus-metrics] [http] [medium] http://127.0.0.1:3000/metrics
+[robots-txt-endpoint] [http] [info] http://127.0.0.1:3000/robots.txt
+[security-txt] [http] [info] http://127.0.0.1:3000/.well-known/security.txt ["mailto:donotreply@owasp-juice.shop"]
+[kubelet-metrics] [http] [info] http://127.0.0.1:3000/metrics
+[missing-sri] [http] [info] http://127.0.0.1:3000 ["//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js","//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"]
+[minecraft-enum] [javascript] [info] 127.0.0.1:3000 ["Version:  Request\r\nConn Description:ection: close Online Players:\n Maximum Players:"]

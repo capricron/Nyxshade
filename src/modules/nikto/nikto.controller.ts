@@ -1,6 +1,7 @@
 
 import { PingService } from "../ping/ping.service";
 import { NiktoService } from "./nikto.service";
+import { NiktoScanResult } from "./types/scan-result.type";
 const serviceNikto = new NiktoService();
 const pingService = new PingService();
 
@@ -14,7 +15,7 @@ export class NiktoController {
             });
         }
 
-        const response = await serviceNikto.niktoScan(c);
+        const response = await serviceNikto.niktoScan(c.req.param().ip);
 
         if(response){
             return c.json({
@@ -29,5 +30,17 @@ export class NiktoController {
                 message: "Nikto scan failed"
             });
         }
+    }
+
+    public async niktoData(c: any){
+        const { ip } = c.req.param();
+
+        const response: NiktoScanResult = await serviceNikto.niktoData(ip)
+        
+        return c.json({
+            status: 200,
+            message: "Success get data host",
+            data: response
+        })
     }
 }

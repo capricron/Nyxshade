@@ -5,9 +5,12 @@
     "create:tables": "ts-node --files ./migrations/migrator.ts"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.12.0",
     "@planetscale/database": "^1.18.0",
     "@prisma/client": "^5.13.0",
+    "axios": "^1.7.0",
     "drizzle-orm": "^0.30.10",
+    "fs": "^0.0.1-security",
     "hono": "^4.3.2",
     "mongoose": "^8.3.4",
     "mysql2": "^3.9.7",

@@ -1,38 +1,19 @@
 import { eq } from "drizzle-orm";
-import { db } from "../../db/db";
-import { hosts } from "../../db/schema";
+import { $ } from "bun";
 
 
 export class NiktoRepository {
 
     async createNiktoScanItem(ip: any, data: any) {
+        console.log(data);
+        const file = `./data/${ip}/nikto.json`;
 
-        const hostData = db.select().from(hosts).where(eq(hosts, String(ip))).execute();
-
-        // if (hostData) {
-        //     db.insert(hosts).values({ ip }).execute();
-        // }
-
-        // const host = prisma.host.findFirst({
-        //     where: {
-        //         ip: data.ip
-        //     }
+        await $`mkdir ./data/${ip}`;
+        await $`rm -rf ${file}`
+        // looping data lalu masukan ke file json
+    //    await data.forEach(async (item: any) => {
+            await $`echo '${JSON.stringify(data)}' >> ${file}`
         // });
-
-        // // jika tidak ditemukan maka create host
-        // if (!host) {`
-        //     await prisma.host.create({
-        //         data: {
-        //             ip
-        //         }
-        //     });
-        // }
-
-        // const nikto = await prisma.nikto.create({
-        //     data
-        // });
-
-        return nikto;
     }
 }
 

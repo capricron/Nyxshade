@@ -5,24 +5,26 @@ import { NiktoScanItem } from "./types/scan-item.type";
 import { NiktoScanResult } from "./types/scan-result.type";
 import { responseNikto } from "./types/res-nikto.type";
 import { NiktoRepository } from "./nikto.repository";
+import clearScan from "../../helpers/clear_scan.helper";
 
 const niktoRepo = new NiktoRepository();
 
 export class NiktoService {
-    public async niktoScan(c: any) {
-        const {ip} = c.req.param();
+    public async niktoScan(ip: any) {
+  
         try{
-            // await $`nikto --host ${ip} --output src/temp/nikto/nikto.xml`;
+            await clearScan('nikto');
+            await $`nikto --host ${ip} --output src/temp/nikto/${ip}.xml`;
 
-            const xmlData = readFileSync("src/temp/nikto/nikto.xml", "utf8");
+            const xmlData = readFileSync(`src/temp/nikto/${ip}.xml`, `utf8`);
 
             const jsonData: any = xml2json(xmlData, { compact: true, spaces: 2 });
-
-            writeFileSync("src/temp/nikto/nikto.json", jsonData);
-
-            const data: NiktoScanResult = JSON.parse(readFileSync("src/temp/nikto/nikto.json", "utf8"));
-            const item: NiktoScanItem[] = data.niktoscan[0].scandetails.item
-
+            
+            writeFileSync(`src/temp/nikto/${ip}.json`, jsonData);
+            
+            const data: NiktoScanResult = JSON.parse(readFileSync(`src/temp/nikto/${ip}.json`, "utf8"));
+            console.log(data.niktoscan);
+            const item: NiktoScanItem[] = data.niktoscan.scandetails.item
             const formattedData: responseNikto[] = item.map((item) => {
                 // Destructuring to extract relevant properties
                 const { description: { _cdata: description }, uri: { _cdata: uri }, namelink: { _cdata: namelink } } = item;
@@ -37,6 +39,11 @@ export class NiktoService {
         }catch(e){
             return false;
         }    
+    }
+
+    public async niktoData(ip: string){
+        const niktoData = await JSON.parse(readFileSync(`data/${ip}/nikto.json`, "utf8"))
+        return niktoData;
     }
 
 }

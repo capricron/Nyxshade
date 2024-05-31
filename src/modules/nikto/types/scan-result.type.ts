@@ -40,7 +40,7 @@ export interface NiktoScanResult {
           endtime: string;
         };
       };
-    }[];
+    };
   }
   
   
