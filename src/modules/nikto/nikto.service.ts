@@ -13,18 +13,20 @@ export class NiktoService {
     public async niktoScan(ip: any) {
   
         try{
-            await clearScan('nikto');
-            await $`nikto --host ${ip} --output src/temp/nikto/${ip}.xml`;
+            // await clearScan('nikto');
 
-            const xmlData = readFileSync(`src/temp/nikto/${ip}.xml`, `utf8`);
+            try{
+                await $`nikto --host ${ip} --output src/temp/nikto/${ip}.xml`;
+            }catch{}
 
+            const xmlData = readFileSync(`./src/temp/nikto/${ip}.xml`, `utf8`);
             const jsonData: any = xml2json(xmlData, { compact: true, spaces: 2 });
             
             writeFileSync(`src/temp/nikto/${ip}.json`, jsonData);
             
-            const data: NiktoScanResult = JSON.parse(readFileSync(`src/temp/nikto/${ip}.json`, "utf8"));
-            console.log(data.niktoscan);
-            const item: NiktoScanItem[] = data.niktoscan.scandetails.item
+            const data = JSON.parse(readFileSync(`src/temp/nikto/${ip}.json`, "utf8"));
+            console.log(data.niktoscans.niktoscan);
+            const item: NiktoScanItem[] = data.niktoscans.niktoscan.scandetails.item
             const formattedData: responseNikto[] = item.map((item) => {
                 // Destructuring to extract relevant properties
                 const { description: { _cdata: description }, uri: { _cdata: uri }, namelink: { _cdata: namelink } } = item;

@@ -6,7 +6,7 @@ export class PingController {
 
     public async checkPing(c: any) {
         const response = await servicePing.checkPing(c);
-        
+        // console.log(response)
         if(response){
             return c.json({
                 status: 200,

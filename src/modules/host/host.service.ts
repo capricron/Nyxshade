@@ -24,6 +24,8 @@ export class HostService {
             return false;
         }
 
+        console.log(host_active)
+
         if(nmap){
             await axios.post(`${process.env.URL_LOCAL}/nmap/${host}`)
         }

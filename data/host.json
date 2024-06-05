@@ -3,5 +3,15 @@
     "name": "sss",
     "host": "192.168.44.142",
     "last_scan": "30 Mei 2024"
+  },
+  {
+    "name": "test",
+    "host": "testphp.vulnweb.com",
+    "last_scan": "4 Juni 2024"
+  },
+  {
+    "name": "halal",
+    "host": "www.hashtagio.halalhack.my.id",
+    "last_scan": "4 Juni 2024"
   }
 ]

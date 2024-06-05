@@ -12,8 +12,8 @@ export class NmapService {
     public async nmapScan(ip: any){
     
         await clearScan('nmap')
-        await $`nmap -A ${ip} -oX src/temp/nmap/${ip}.xml`
-        // await $`nmap -A ${ip} -Pn -p- -A -oX src/temp/nmap/${ip}.xml`
+        // await $`nmap -A ${ip} -oX src/temp/nmap/${ip}.xml`
+        await $`nmap ${ip} -Pn -p- -A -oX src/temp/nmap/${ip}.xml`
         const xmlData = readFileSync(`src/temp/nmap/${ip}.xml`, "utf8");
         const jsonData: any = xml2json(xmlData, { compact: true, spaces: 2 });
         writeFileSync(`src/temp/nmap/${ip}.json`, jsonData);
