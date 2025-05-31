@@ -44,21 +44,21 @@ export class HostService {
             await axios.post(`${process.env.URL_LOCAL}/nikto/${host}`)
         }
 
-        // // panggil fucntion AIGenerate
-        // const resume: any = await AIGenerate(
-        //     "Buatkan ringkasan hasil scan host berikut ini: " + host + "\n\n"
-        //     + "Hasil scan Nmap: \n" + 
-        //     fs.readFileSync(`data/${host}/nmap.json`, 'utf8') + "\n\n"
-        //     +
-        //     "Hasil scan Nikto: \n" + 
-        //     fs.readFileSync(`data/${host}/nikto.json`, 'utf8') + "\n\n"
-        //     +
-        //     "Buat ringkasan yang singkat dan jelas, sertakan informasi penting seperti port yang terbuka, layanan yang berjalan, dan potensi kerentanan yang ditemukan.",
-        // )
+        // panggil fucntion AIGenerate
+        const resume: any = await AIGenerate(
+            "Buatkan ringkasan hasil scan host berikut ini: " + host + "\n\n"
+            + "Hasil scan Nmap: \n" + 
+            fs.readFileSync(`data/${host}/nmap.json`, 'utf8') + "\n\n"
+            +
+            "Hasil scan Nikto: \n" + 
+            fs.readFileSync(`data/${host}/nikto.json`, 'utf8') + "\n\n"
+            +
+            "Buat ringkasan yang singkat dan jelas, sertakan informasi penting seperti port yang terbuka, layanan yang berjalan, dan potensi kerentanan yang ditemukan.",
+        )
 
-        // // simpan hasil resume ke file data/host/{host}/resume.txt
-        // const resumeFilePath = `data/${host}/resume.txt`;
-        // fs.writeFileSync(resumeFilePath, resume);
+        // simpan hasil resume ke file data/host/{host}/resume.txt
+        const resumeFilePath = `data/${host}/resume.txt`;
+        fs.writeFileSync(resumeFilePath, resume);
 
         // const niktoResult = await axios.post(`${process.env.URL_LOCAL}/nikto/${host}`)
         const time = new Date().toISOString();

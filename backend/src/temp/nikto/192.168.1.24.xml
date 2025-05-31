@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<!DOCTYPE niktoscan SYSTEM "/usr/share/doc/nikto/nikto.dtd">
+<niktoscan hoststest="0" options="--host 192.168.1.24 --output src/temp/nikto/192.168.1.24.xml" version="2.1.5" scanstart="Sat May 31 14:59:09 2025" scanend="Thu Jan  1 07:00:00 1970" scanelapsed=" seconds" nxmlversion="1.2">
+
+<scandetails targetip="192.168.1.24" targethostname="192.168.1.24" targetport="80" targetbanner="nginx/1.22.1" starttime="2025-05-31 14:59:09" sitename="http://192.168.1.24:80" siteip="http://192.168.1.24:80" hostheader="192.168.1.24" errors="0" checks="6544">
+
+
+<item id="999976" osvdbid="0" osvdblink="http://osvdb.org/0" method="GET">
+<description><![CDATA[The anti-clickjacking X-Frame-Options header is not present.]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://192.168.1.24:80/]]></namelink>
+<iplink><![CDATA[http://192.168.1.24:80/]]></iplink>
+</item>
+
+<item id="000560" osvdbid="0" osvdblink="http://osvdb.org/0" method="GET">
+<description><![CDATA[/index.php?page=../../../../../../../../../../etc/passwd: The PHP-Nuke Rocket add-in is vulnerable to file traversal, allowing an attacker to view any file on the host. (probably Rocket, but could be any index.php)]]></description>
+<uri><![CDATA[/index.php?page=../../../../../../../../../../etc/passwd]]></uri>
+<namelink><![CDATA[http://192.168.1.24:80/index.php?page=../../../../../../../../../../etc/passwd]]></namelink>
+<iplink><![CDATA[http://192.168.1.24:80/index.php?page=../../../../../../../../../../etc/passwd]]></iplink>
+</item>
+
+<item id="001145" osvdbid="3233" osvdblink="http://osvdb.org/3233" method="GET">
+<description><![CDATA[/phpinfo.php: Contains PHP configuration information]]></description>
+<uri><![CDATA[/phpinfo.php]]></uri>
+<namelink><![CDATA[http://192.168.1.24:80/phpinfo.php]]></namelink>
+<iplink><![CDATA[http://192.168.1.24:80/phpinfo.php]]></iplink>
+</item>
+
+<statistics elapsed="16" itemsfound="3" itemstested="6544" endtime="2025-05-31 14:59:25" />
+</scandetails>
+
+
+</niktoscan>

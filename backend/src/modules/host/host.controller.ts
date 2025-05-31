@@ -15,14 +15,15 @@ export class HostController {
         const niktoData = await JSON.parse(readFileSync(`data/${ip}/nikto.json`, "utf8"))
         const hostData = await JSON.parse(readFileSync(`data/host.json`, "utf8"))
         const nmapData = await JSON.parse(readFileSync(`data/${ip}/nmap.json`, "utf8"))
-
+        const resumeData = readFileSync(`data/${ip}/resume.txt`, "utf8");
         return c.json({
             status: 200,
             message: "Success get data host",
             data: {
                 target_name: hostData.find((item: any) => item.host === ip).name,
                 niktoData,
-                nmapData
+                nmapData,
+                resumeData,
             }
         })
     }

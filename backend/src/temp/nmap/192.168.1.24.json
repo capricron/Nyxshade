@@ -9,13 +9,13 @@
   "_instruction": {
     "xml-stylesheet": "href=\"file:///usr/bin/../share/nmap/nmap.xsl\" type=\"text/xsl\""
   },
-  "_comment": " Nmap 7.94SVN scan initiated Sat May 31 14:39:16 2025 as: /usr/bin/nmap -Pn -p- -A -oX src/temp/nmap/192.168.1.29.xml 192.168.1.29 ",
+  "_comment": " Nmap 7.94SVN scan initiated Sat May 31 14:58:41 2025 as: /usr/bin/nmap -Pn -p- -A -oX src/temp/nmap/192.168.1.24.xml 192.168.1.24 ",
   "nmaprun": {
     "_attributes": {
       "scanner": "nmap",
-      "args": "/usr/bin/nmap -Pn -p- -A -oX src/temp/nmap/192.168.1.29.xml 192.168.1.29",
-      "start": "1748677156",
-      "startstr": "Sat May 31 14:39:16 2025",
+      "args": "/usr/bin/nmap -Pn -p- -A -oX src/temp/nmap/192.168.1.24.xml 192.168.1.24",
+      "start": "1748678321",
+      "startstr": "Sat May 31 14:58:41 2025",
       "version": "7.94SVN",
       "xmloutputversion": "1.05"
     },
@@ -39,8 +39,8 @@
     },
     "host": {
       "_attributes": {
-        "starttime": "1748677156",
-        "endtime": "1748677182"
+        "starttime": "1748678321",
+        "endtime": "1748678349"
       },
       "status": {
         "_attributes": {
@@ -51,14 +51,14 @@
       },
       "address": {
         "_attributes": {
-          "addr": "192.168.1.29",
+          "addr": "192.168.1.24",
           "addrtype": "ipv4"
         }
       },
       "hostnames": {
         "hostname": {
           "_attributes": {
-            "name": "192.168.1.29",
+            "name": "192.168.1.24",
             "type": "PTR"
           }
         }
@@ -120,9 +120,9 @@
                   "elem": [
                     {
                       "_attributes": {
-                        "key": "type"
+                        "key": "key"
                       },
-                      "_text": "ecdsa-sha2-nistp256"
+                      "_text": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAD/JsAEczZxlZYFfeOn55uqpnvJek8d+1kg4Eb6OvZG3FZ2P69at4Vbh16t266RLy93X+loHDo3mP6AoKZCHow="
                     },
                     {
                       "_attributes": {
@@ -132,20 +132,32 @@
                     },
                     {
                       "_attributes": {
-                        "key": "fingerprint"
+                        "key": "type"
                       },
-                      "_text": "36656a84c2fab0ba3f722b26ab716798"
+                      "_text": "ecdsa-sha2-nistp256"
                     },
                     {
                       "_attributes": {
-                        "key": "key"
+                        "key": "fingerprint"
                       },
-                      "_text": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAD/JsAEczZxlZYFfeOn55uqpnvJek8d+1kg4Eb6OvZG3FZ2P69at4Vbh16t266RLy93X+loHDo3mP6AoKZCHow="
+                      "_text": "36656a84c2fab0ba3f722b26ab716798"
                     }
                   ]
                 },
                 {
                   "elem": [
+                    {
+                      "_attributes": {
+                        "key": "key"
+                      },
+                      "_text": "AAAAC3NzaC1lZDI1NTE5AAAAIEQsF4EFFvU9GNXeMToe+kKZU2opXCERyPHT0NrcYvZK"
+                    },
+                    {
+                      "_attributes": {
+                        "key": "bits"
+                      },
+                      "_text": "256"
+                    },
                     {
                       "_attributes": {
                         "key": "type"
@@ -154,21 +166,9 @@
                     },
                     {
                       "_attributes": {
-                        "key": "bits"
-                      },
-                      "_text": "256"
-                    },
-                    {
-                      "_attributes": {
                         "key": "fingerprint"
                       },
                       "_text": "1938442739321d1c989abc7800ab814b"
-                    },
-                    {
-                      "_attributes": {
-                        "key": "key"
-                      },
-                      "_text": "AAAAC3NzaC1lZDI1NTE5AAAAIEQsF4EFFvU9GNXeMToe+kKZU2opXCERyPHT0NrcYvZK"
                     }
                   ]
                 }
@@ -191,19 +191,31 @@
               "_attributes": {
                 "name": "http",
                 "product": "nginx",
+                "version": "1.22.1",
                 "method": "probed",
                 "conf": "10"
               },
               "cpe": {
-                "_text": "cpe:/a:igor_sysoev:nginx"
+                "_text": "cpe:/a:igor_sysoev:nginx:1.22.1"
               }
             },
-            "script": {
-              "_attributes": {
-                "id": "http-title",
-                "output": "Site doesn't have a title (text/html; charset=UTF-8)."
+            "script": [
+              {
+                "_attributes": {
+                  "id": "http-server-header",
+                  "output": "nginx/1.22.1"
+                },
+                "elem": {
+                  "_text": "nginx/1.22.1"
+                }
+              },
+              {
+                "_attributes": {
+                  "id": "http-title",
+                  "output": "Site doesn't have a title (text/html; charset=UTF-8)."
+                }
               }
-            }
+            ]
           }
         ]
       },
@@ -227,7 +239,7 @@
             "_attributes": {
               "state": "closed",
               "proto": "udp",
-              "portid": "42967"
+              "portid": "30505"
             }
           }
         ],
@@ -448,7 +460,7 @@
           {
             "_attributes": {
               "name": "Synology DiskStation Manager 5.2-5644",
-              "accuracy": "91",
+              "accuracy": "92",
               "line": "101723"
             },
             "osclass": {
@@ -457,7 +469,7 @@
                 "vendor": "Synology",
                 "osfamily": "DiskStation Manager",
                 "osgen": "5.X",
-                "accuracy": "91"
+                "accuracy": "92"
               },
               "cpe": {
                 "_text": "cpe:/a:synology:diskstation_manager:5.2"
@@ -467,14 +479,14 @@
         ],
         "osfingerprint": {
           "_attributes": {
-            "fingerprint": "OS:SCAN(V=7.94SVN%E=4%D=5/31%OT=22%CT=1%CU=42967%PV=Y%DS=2%DC=T%G=Y%TM=683A\nOS:B23E%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10C%TI=Z%CI=Z%II=I%TS=A)\nOS:SEQ(SP=104%GCD=2%ISR=10C%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M5B4ST11NW7%O2=M5B4S\nOS:T11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B4ST11NW7%O6=M5B4ST11)WIN(W1=\nOS:FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=\nOS:M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)\nOS:T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S\nOS:+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=\nOS:Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G\nOS:%RID=G%RIPCK=G%RUCK=9C0E%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)\n"
+            "fingerprint": "OS:SCAN(V=7.94SVN%E=4%D=5/31%OT=22%CT=1%CU=30505%PV=Y%DS=2%DC=T%G=Y%TM=683A\nOS:B6CD%P=x86_64-pc-linux-gnu)SEQ(SP=FF%GCD=1%ISR=10D%TI=Z%CI=Z%II=I%TS=A)O\nOS:PS(O1=M5B4ST11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B4S\nOS:T11NW7%O6=M5B4ST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)E\nOS:CN(R=Y%DF=Y%T=40%W=FAF0%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F\nOS:=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5\nOS:(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z\nOS:%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=\nOS:N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=CCEC%RUD=G)IE(R=Y%DFI=N%T=\nOS:40%CD=S)\n"
           }
         }
       },
       "uptime": {
         "_attributes": {
-          "seconds": "1277933",
-          "lastboot": "Fri May 16 19:40:49 2025"
+          "seconds": "2654190",
+          "lastboot": "Wed Apr 30 21:42:39 2025"
         }
       },
       "distance": {
@@ -484,9 +496,9 @@
       },
       "tcpsequence": {
         "_attributes": {
-          "index": "260",
+          "index": "255",
           "difficulty": "Good luck!",
-          "values": "2ADD7E19,D721C3C6,68BE8FA4,5E7D01A3,97773A7,574EA427"
+          "values": "5B34D665,CAFD5906,EC9E566,DD7CC9AD,37B54585,DFB19BEC"
         }
       },
       "ipidsequence": {
@@ -498,12 +510,12 @@
       "tcptssequence": {
         "_attributes": {
           "class": "1000HZ",
-          "values": "4C2BB06E,4C2BB0DA,4C2BB145,4C2BB1B1,4C2BB21D,4C2BB287"
+          "values": "9E33B4AC,9E33B517,9E33B582,9E33B5EC,9E33B657,9E33B6C5"
         }
       },
       "trace": {
         "_attributes": {
-          "port": "53",
+          "port": "199",
           "proto": "tcp"
         },
         "hop": [
@@ -511,24 +523,24 @@
             "_attributes": {
               "ttl": "1",
               "ipaddr": "172.20.48.1",
-              "rtt": "0.25",
+              "rtt": "0.38",
               "host": "Glaucus.mshome.net"
             }
           },
           {
             "_attributes": {
               "ttl": "2",
-              "ipaddr": "192.168.1.29",
-              "rtt": "1.15",
-              "host": "192.168.1.29"
+              "ipaddr": "192.168.1.24",
+              "rtt": "1.63",
+              "host": "192.168.1.24"
             }
           }
         ]
       },
       "times": {
         "_attributes": {
-          "srtt": "999",
-          "rttvar": "337",
+          "srtt": "2148",
+          "rttvar": "1461",
           "to": "100000"
         }
       }
@@ -536,10 +548,10 @@
     "runstats": {
       "finished": {
         "_attributes": {
-          "time": "1748677182",
-          "timestr": "Sat May 31 14:39:42 2025",
-          "summary": "Nmap done at Sat May 31 14:39:42 2025; 1 IP address (1 host up) scanned in 26.47 seconds",
-          "elapsed": "26.47",
+          "time": "1748678349",
+          "timestr": "Sat May 31 14:59:09 2025",
+          "summary": "Nmap done at Sat May 31 14:59:09 2025; 1 IP address (1 host up) scanned in 28.34 seconds",
+          "elapsed": "28.34",
           "exit": "success"
         }
       },
