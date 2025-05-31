@@ -21,6 +21,7 @@ export class HostController {
             message: "Success get data host",
             data: {
                 target_name: hostData.find((item: any) => item.host === ip).name,
+                target_address: ip,
                 niktoData,
                 nmapData,
                 resumeData,

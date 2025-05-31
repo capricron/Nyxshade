@@ -13,5 +13,10 @@
     "name": "halal",
     "host": "www.hashtagio.halalhack.my.id",
     "last_scan": "4 Juni 2024"
+  },
+  {
+    "name": "Testing",
+    "host": "192.168.1.24",
+    "last_scan": "1 Juni 2025"
   }
 ]
