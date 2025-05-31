@@ -8,11 +8,10 @@ export class HostRepository {
         try {
             const data = readFileSync(fileName, 'utf8');
             let jsonData = JSON.parse(data);
-            console.log(jsonData)
             jsonData.push(newData);            
             const updatedJsonData = JSON.stringify(jsonData, null, 2);
             writeFileSync(fileName, updatedJsonData, 'utf8');            
-            console.log('Data berhasil ditambahkan!');
+            // console.log('Data berhasil ditambahkan!');
         } catch (err) {
             console.error('Gagal membaca atau menulis file:', err);
         }

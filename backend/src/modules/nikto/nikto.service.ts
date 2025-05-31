@@ -13,7 +13,7 @@ export class NiktoService {
     public async niktoScan(ip: any) {
   
         try{
-            // await clearScan('nikto');
+            await clearScan('nikto', ip);
 
             try{
                 await $`nikto --host ${ip} --output src/temp/nikto/${ip}.xml`;
@@ -23,10 +23,10 @@ export class NiktoService {
             const jsonData: any = xml2json(xmlData, { compact: true, spaces: 2 });
             
             writeFileSync(`src/temp/nikto/${ip}.json`, jsonData);
-            
+            // hapus file di temp xml dan json
             const data = JSON.parse(readFileSync(`src/temp/nikto/${ip}.json`, "utf8"));
-            console.log(data.niktoscans.niktoscan);
-            const item: NiktoScanItem[] = data.niktoscans.niktoscan.scandetails.item
+            console.log(data);
+            const item: NiktoScanItem[] = data.niktoscan.scandetails.item
             const formattedData: responseNikto[] = item.map((item) => {
                 // Destructuring to extract relevant properties
                 const { description: { _cdata: description }, uri: { _cdata: uri }, namelink: { _cdata: namelink } } = item;
@@ -34,11 +34,11 @@ export class NiktoService {
                 // Create a new object with the desired properties and types
                 return { method: item._attributes.method, description, uri, namelink };
             });
-
             await niktoRepo.createNiktoScanItem(ip, formattedData);
 
-            return formattedData;            
+            // return formattedData;            
         }catch(e){
+            console.error("Error during Nikto scan:", e);
             return false;
         }    
     }

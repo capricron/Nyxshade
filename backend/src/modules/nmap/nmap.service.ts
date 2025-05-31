@@ -11,7 +11,7 @@ const nmapRepo = new NmapRepository();
 export class NmapService {
     public async nmapScan(ip: any){
     
-        await clearScan('nmap')
+        await clearScan('nmap', ip);
         // await $`nmap -A ${ip} -oX src/temp/nmap/${ip}.xml`
         await $`nmap ${ip} -Pn -p- -A -oX src/temp/nmap/${ip}.xml`
         const xmlData = readFileSync(`src/temp/nmap/${ip}.xml`, "utf8");

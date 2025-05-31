@@ -5,7 +5,6 @@ import { $ } from "bun";
 export class NiktoRepository {
 
     async createNiktoScanItem(ip: any, data: any) {
-        console.log(data);
         const file = `./data/${ip}/nikto.json`;
         try{
             await $`mkdir ./data/${ip}`;

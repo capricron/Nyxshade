@@ -1,0 +1,149 @@
+[
+  {
+    "name": "sss",
+    "host": "192.168.44.142",
+    "last_scan": "30 Mei 2024"
+  },
+  {
+    "name": "test",
+    "host": "testphp.vulnweb.com",
+    "last_scan": "4 Juni 2024"
+  },
+  {
+    "name": "halal",
+    "host": "www.hashtagio.halalhack.my.id",
+    "last_scan": "4 Juni 2024"
+  },
+  {
+    "name": "192.168.1.5",
+    "host": "192.168.1.5",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.15",
+    "host": "192.168.1.15",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.21",
+    "host": "192.168.1.21",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.25",
+    "host": "192.168.1.25",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.24",
+    "host": "192.168.1.24",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.24",
+    "host": "192.168.1.24",
+    "last_scan": "31 Mei 2025"
+  },
+  {
+    "name": "192.168.1.24",
+    "host": "192.168.1.24",
+    "last_scan": "31 Mei 2025",
+    "resume": "Mohon maaf, saya tidak dapat membuat ringkasan hasil scan untuk 192.168.1.24 berdasarkan informasi yang Anda berikan.\n\nAlasannya adalah:\n*   **Hasil scan Nmap:** Muncul sebagai `[object Object],[object Object]`, yang bukan format output scan Nmap yang sebenarnya dan tidak berisi detail port, layanan, atau informasi host.\n*   **Hasil scan Nikto:** Muncul sebagai `undefined`, yang berarti tidak ada hasil scan Nikto yang diberikan atau scan tersebut tidak dijalankan/berhasil.\n\nUntuk dapat membuat ringkasan yang Anda inginkan (termasuk port yang terbuka, layanan, dan potensi kerentanan), mohon berikan output teks *sebenarnya* dari scan Nmap dan Nikto. Setelah Anda memberikan output yang valid, saya akan dengan senang hati membantu merangkumnya."
+  },
+  {
+    "name": "192.168.1.24",
+    "host": "192.168.1.24",
+    "last_scan": "31 Mei 2025",
+    "resume": "Berikut adalah ringkasan hasil scan untuk host **192.168.1.24**:\n\n**Informasi Umum:**\n*   **Target IP:** 192.168.1.24\n\n**Port dan Layanan yang Terbuka (Nmap):**\n1.  **Port 22/TCP:** Terbuka, menjalankan layanan **SSH** (Secure Shell) dengan versi **OpenSSH 9.2p1 Debian 2+deb12u6**. Sistem operasi yang terdeteksi adalah **Linux**.\n2.  **Port 80/TCP:** Terbuka, menjalankan server web **HTTP** dengan versi **Nginx 1.22.1**.\n\n**Potensi Kerentanan yang Ditemukan (Nikto):**\n*   **Header `X-Frame-Options` Hilang:** Server web (Nginx) tidak mengirimkan header `X-Frame-Options`, yang membuat host rentan terhadap serangan **clickjacking**.\n*   **Kerentanan Traversal File (PHP-Nuke Rocket):** Ditemukan potensi kerentanan traversal file pada `/index.php?page=../../../../../../../../../../etc/passwd`. Ini mengindikasikan add-in PHP-Nuke Rocket (atau modul lain yang serupa) rentan, memungkinkan penyerang untuk membaca file arbitrer di sistem (misalnya, `/etc/passwd`).\n*   **Informasi Konfigurasi PHP Terungkap:** File `/phpinfo.php` ditemukan, yang biasanya berisi informasi konfigurasi PHP yang sensitif. Ini dapat digunakan oleh penyerang untuk memahami lebih lanjut tentang lingkungan server dan merencanakan serangan.\n\n**Kesimpulan Singkat:**\nHost 192.168.1.24 menjalankan layanan SSH dan server web Nginx. Hasil scan menunjukkan beberapa kerentanan serius pada server web, termasuk **kerentanan traversal file** yang berpotensi memungkinkan pembacaan file sensitif, kurangnya perlindungan **anti-clickjacking**, dan **pengungkapan informasi konfigurasi PHP** melalui file `phpinfo.php`. Sangat disarankan untuk segera meninjau dan memperbaiki kerentanan ini."
+  }
+]

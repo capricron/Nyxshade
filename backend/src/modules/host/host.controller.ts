@@ -8,25 +8,45 @@ import { HostService } from "./host.service";
 const hostService = new HostService();
 
 export class HostController {
+
     public async hostInformation(c: any) {
         const { ip } = c.req.param();
 
-        const niktoData = await JSON.parse(readFileSync(`src/temp/nikto/${ip}.json`, "utf8"))
-        
-        const nmapData = await JSON.parse(readFileSync(`src/temp/nmap/${ip}.json`, "utf8"))
-        
+        const niktoData = await JSON.parse(readFileSync(`data/${ip}/nikto.json`, "utf8"))
+        const hostData = await JSON.parse(readFileSync(`data/host.json`, "utf8"))
+        const nmapData = await JSON.parse(readFileSync(`data/${ip}/nmap.json`, "utf8"))
+
         return c.json({
             status: 200,
             message: "Success get data host",
             data: {
+                target_name: hostData.find((item: any) => item.host === ip).name,
                 niktoData,
                 nmapData
             }
         })
     }
 
-    public async allHost(c: any){
-        
+    public async resumeReport(c: any) {
+        const { ip } = c.req.param();
+
+        const niktoData = await JSON.parse(readFileSync(`data/${ip}/nikto.json`, "utf8"))
+        const hostData = await JSON.parse(readFileSync(`data/host.json`, "utf8"))
+        const nmapData = await JSON.parse(readFileSync(`data/${ip}/nmap.json`, "utf8"))
+
+        return c.json({
+            status: 200,
+            message: "Success get data host",
+            data: {
+                target_name: hostData.find((item: any) => item.host === ip).name,
+                niktoData,
+                nmapData
+            }
+        })
+    }
+
+    public async allHost(c: any) {
+
         const data = JSON.parse(readFileSync('data/host.json', 'utf8'));
 
         return c.json({
@@ -37,20 +57,19 @@ export class HostController {
 
     }
 
-    public async newScan(c: any){
+    public async newScan(c: any) {
         const { name, host, nmap, nikto, nuclei } = await c.req.json();
 
         const response = await hostService.scanNew(
-            host, 
+            host,
             name,
             nmap,
             nikto,
             nuclei
         );
 
-        // console.log(response)
 
-        if(!response){
+        if (!response) {
             return c.json({
                 status: 400,
                 message: "Invalid IP address"

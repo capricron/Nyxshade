@@ -26,5 +26,24 @@ app.route('/nikto', niktoRoute)
 app.route('/nmap', nmapRoute)
 app.route('/host', host)
 app.route('/subfinder', subfinder)
+app.get('/ai/:ip', async (c) => {
+  // ambil input slug 
+  const { ip } = c.req.param()
+  // baca file data/host/{ip}/resume.txt
+  const fs = require('fs');
+  const resumeFilePath = `data/${ip}/resume.txt`;
+  if (!fs.existsSync(resumeFilePath)) {
+    return c.json({
+      status: 404,
+      message: 'Resume file not found'
+    })
+  }
+  const resume = fs.readFileSync(resumeFilePath, 'utf8');
+  return c.json({
+    status: 200,
+    message: 'Success get resume',
+    data: resume
+  })
+})
 
 export default app;

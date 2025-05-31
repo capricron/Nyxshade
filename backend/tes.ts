@@ -22,6 +22,5 @@ const processLine = (line: any) => {
 // Proses setiap baris
 const results = dataSplit.map(processLine).filter(result => result !== null);
 
-console.log(results[0]); // Contoh output: 'addeventlistener-detect'
 
 // 
